@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const SECRET = process.env.SECRET_KEY;
 const app = express();
-const PORT = 9090;
+const PORT = process.env.PORT || 9090;
 app.use(express.json());
 app.use((req, res, next) => {
     console.log(req.body)
